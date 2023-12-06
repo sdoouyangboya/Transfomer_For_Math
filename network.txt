@@ -1,0 +1,104 @@
+Total number of trainable parameters =  434,133 
+
+Seq2Seq(
+  (encoder): Encoder(
+    (tok_embedding): Embedding(184, 64), 11,776 params
+    (pos_embedding): Embedding(100, 64), 6,400 params
+    (layers): ModuleList(
+      (0): EncoderLayer(
+        (self_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (ff_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=64, out_features=128, bias=True), 8,320 params
+          (fc_2): Linear(in_features=128, out_features=64, bias=True), 8,256 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,576 params
+        (dropout): Dropout(p=0.3, inplace=False), 0 params
+      ), 33,472 params
+      (1): EncoderLayer(
+        (self_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (ff_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=64, out_features=128, bias=True), 8,320 params
+          (fc_2): Linear(in_features=128, out_features=64, bias=True), 8,256 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,576 params
+        (dropout): Dropout(p=0.3, inplace=False), 0 params
+      ), 33,472 params
+    ), 66,944 params
+    (dropout): Dropout(p=0.3, inplace=False), 0 params
+  ), 85,120 params
+  (decoder): Decoder(
+    (tok_embedding): Embedding(1877, 64), 120,128 params
+    (pos_embedding): Embedding(100, 64), 6,400 params
+    (layers): ModuleList(
+      (0): DecoderLayer(
+        (self_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (enc_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (ff_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (encoder_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=64, out_features=128, bias=True), 8,320 params
+          (fc_2): Linear(in_features=128, out_features=64, bias=True), 8,256 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,576 params
+        (dropout): Dropout(p=0.3, inplace=False), 0 params
+      ), 50,240 params
+      (1): DecoderLayer(
+        (self_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (enc_attn_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (ff_layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True), 128 params
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (encoder_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_k): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_v): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (fc_o): Linear(in_features=64, out_features=64, bias=True), 4,160 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,640 params
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=64, out_features=128, bias=True), 8,320 params
+          (fc_2): Linear(in_features=128, out_features=64, bias=True), 8,256 params
+          (dropout): Dropout(p=0.3, inplace=False), 0 params
+        ), 16,576 params
+        (dropout): Dropout(p=0.3, inplace=False), 0 params
+      ), 50,240 params
+    ), 100,480 params
+    (fc_out): Linear(in_features=64, out_features=1877, bias=True), 122,005 params
+    (dropout): Dropout(p=0.3, inplace=False), 0 params
+  ), 349,013 params
+  (criterion): CrossEntropyLoss(), 0 params
+),
